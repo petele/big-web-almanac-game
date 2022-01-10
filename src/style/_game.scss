@@ -59,3 +59,18 @@ fieldset {
     --timer: 100%;
   }
 }
+
+@media (max-width: 500px) {
+  .answer-list {
+    grid-template: 1fr / 1fr;
+  }
+
+  .question-block {
+    padding: 0.5rem;
+    border-radius: 2.5rem;
+  }
+
+  fieldset {
+    padding: 1rem;
+  }
+}

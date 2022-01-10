@@ -2,7 +2,6 @@
   display: grid;
   justify-content: space-between;
   grid-template-columns: auto auto;
-  padding: 1rem;
   align-items: center;
   margin-bottom: 2rem;
 }
@@ -16,11 +15,21 @@
 
 .logo {
   max-width: 350px;
+  width: 100%;
 }
 
 @media (max-width: 500px) {
   .header {
     grid-template-columns: auto;
     justify-content: center;
+    margin-bottom: 0;
+  }
+
+  .about-btn {
+    display: none;
+  }
+
+  .timer {
+    text-align: center;
   }
 }
