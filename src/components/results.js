@@ -7,9 +7,14 @@ class Results extends Component {
   };
 
   render(state) {
+    const calcPercent = () => {
+      return this.state.correct / this.state.total * 100;
+    }
+
     return (
       <div class="container">
-        <h2>Nice job! In 60 seconds, you answered <span>{state.correct}</span> questions correctly out of <span>{state.total}</span> total questions attempted.</h2>
+        <h2>{calcPercent()}% correct out of <span>{this.state.total}!</span></h2>
+        <p>Nice job! In 60 seconds, you answered <span>{this.state.correct}</span> questions correctly out of <span>{this.state.total}</span> total questions attempted.</p>
       </div>
     );
   }
