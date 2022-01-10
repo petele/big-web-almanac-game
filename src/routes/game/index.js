@@ -1,5 +1,6 @@
 import { h } from 'preact';
 import Question from '../../components/question.js';
+import Timer from '../../components/timer.js';
 
 // Game state and timer
 
@@ -10,6 +11,7 @@ const Game = () => {
   return (
     <div class="container">
       {/* Send question, number, answers */}
+      <Timer />
       <Question 
         q="What is the meaning of life?" 
         num="1" 
