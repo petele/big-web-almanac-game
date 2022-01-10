@@ -62,7 +62,7 @@ function generateCandidateAnswers(question) {
 
   const min = question['Min'];
   const max = question['Max'];
-  const precision = question['Units of Precision'];
+  const precision = question['Digits of Precision'];
   const suffix = question['Suffix'];
 
   return candidateAnswers.map(_ => generateRandomValue(min, max, precision, suffix));
