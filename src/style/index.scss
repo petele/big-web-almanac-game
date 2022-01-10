@@ -1,2 +1,10 @@
+// Utilities
 @import '_normalize';
+@import '_theme';
+
+// Base Theme
+@import '_base';
+@import '_typography';
+
+// Components
 @import '_header';
