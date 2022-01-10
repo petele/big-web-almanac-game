@@ -6,6 +6,7 @@ import { Router } from 'preact-router';
 import NotFound from '../routes/404';
 import Landing from '../routes/landing';
 import Game from '../routes/game';
+import Header from '../static/header.js';
 
 class App extends Component {
 
@@ -19,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <div id="app">
-        <header>Header</header>
+        <Header />
         <main>
           <Router onChange={this.handleRoute}>
             <Landing path="/" />
