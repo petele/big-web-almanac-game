@@ -1,0 +1,662 @@
+[
+  {
+    "Chapter Number": 9,
+    "Chapter": "accessibility",
+    "Clue": "What percent of websites use an accessibility overlay?",
+    "Answer": "0.96%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 9,
+    "Chapter": "accessibility",
+    "Clue": "What percent of websites pass the color contrast audit in Lighthouse?",
+    "Answer": "22%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 0,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 9,
+    "Chapter": "accessibility",
+    "Clue": "What percent of websites have buttons that get their accessible name from content?",
+    "Answer": "57%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 0,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 14,
+    "Chapter": "capabilities",
+    "Clue": "What percent of websites use the Web Share API?",
+    "Answer": "9%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 0,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 14,
+    "Chapter": "capabilities",
+    "Clue": "What percent of websites use the Async Clipboard API?",
+    "Answer": "8.25%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 14,
+    "Chapter": "capabilities",
+    "Clue": "What percent of websites use Declarative Link Capturing?",
+    "Answer": 11,
+    "Min": 0,
+    "Max": 10000,
+    "Digits of Precision": 0,
+    "Suffix": ""
+  },
+  {
+    "Chapter Number": 21,
+    "Chapter": "cdn",
+    "Clue": "What percent of the top 1,000 most popular websites use a CDN?",
+    "Answer": "62.30%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 21,
+    "Chapter": "cdn",
+    "Clue": "How much faster is TLS negotiation with CDN at the 90th percentile?",
+    "Answer": "3x",
+    "Min": 1,
+    "Max": 10,
+    "Digits of Precision": 0,
+    "Suffix": "x"
+  },
+  {
+    "Chapter Number": 21,
+    "Chapter": "cdn",
+    "Clue": "What percent of domains use Brotli on a CDN?",
+    "Answer": "42.50%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 16,
+    "Chapter": "cms",
+    "Clue": "What percent of websites are built using a CMS?",
+    "Answer": "46%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 0,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 16,
+    "Chapter": "cms",
+    "Clue": "What is the median number of bytes loaded by a website built with a CMS?",
+    "Answer": "2MB",
+    "Min": 1,
+    "Max": 50,
+    "Digits of Precision": 0,
+    "Suffix": "MB"
+  },
+  {
+    "Chapter Number": 16,
+    "Chapter": "cms",
+    "Clue": "What percent of WordPress websites use WebP?",
+    "Answer": "5.70%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 22,
+    "Chapter": "compression",
+    "Clue": "What percent of compressed responses use Brotli?",
+    "Answer": "33%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 0,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 22,
+    "Chapter": "compression",
+    "Clue": "What percent of compressed responses use Gzip?",
+    "Answer": "66%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 0,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 22,
+    "Chapter": "compression",
+    "Clue": "What percent of websites pass the Lighthouse audit with maximum score on text compression?",
+    "Answer": "72%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 0,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 1,
+    "Chapter": "css",
+    "Clue": "What percent of websites use Flexbox for some form of layout?",
+    "Answer": "71%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 0,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 1,
+    "Chapter": "css",
+    "Clue": "What is the median number of images loaded via CSS?",
+    "Answer": 3,
+    "Min": 0,
+    "Max": 25,
+    "Digits of Precision": 0,
+    "Suffix": ""
+  },
+  {
+    "Chapter Number": 1,
+    "Chapter": "css",
+    "Clue": "The percentage of pages using custom properties.",
+    "Answer": "29%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 0,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 17,
+    "Chapter": "ecommerce",
+    "Clue": "What percent of websites are identified as ecommerce sites?",
+    "Answer": "19.49%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 17,
+    "Chapter": "ecommerce",
+    "Clue": "What percent of websites use WooCommerce, the most popular ecommerce platform?",
+    "Answer": "5.93%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 17,
+    "Chapter": "ecommerce",
+    "Clue": "What percent of WooCommerce sites have good Core Web Vitals experiences?",
+    "Answer": "11%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 0,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 24,
+    "Chapter": "http",
+    "Clue": "What is the percent decline in HTTP/1.1 requests between 2020 and 2021?",
+    "Answer": "25%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 0,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 24,
+    "Chapter": "http",
+    "Clue": "What percent of the top 1,000 websites have HTTP/2 enabled?",
+    "Answer": "82%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 0,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 24,
+    "Chapter": "http",
+    "Clue": "What percent of websites use HTTP/2 push?",
+    "Answer": "1.25%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 18,
+    "Chapter": "jamstack",
+    "Clue": "What percent of websites use the Jamstack architecture?",
+    "Answer": "1.10%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 18,
+    "Chapter": "jamstack",
+    "Clue": "What percent of Jamstack websites use jQuery?",
+    "Answer": "9.50%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 18,
+    "Chapter": "jamstack",
+    "Clue": "What is the median amount of bytes loaded by a Jamstack website?",
+    "Answer": "1.7MB",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "MB"
+  },
+  {
+    "Chapter Number": 2,
+    "Chapter": "javascript",
+    "Clue": "What is the median number of asynchronous JS requests made per page?",
+    "Answer": 4,
+    "Min": 0,
+    "Max": 25,
+    "Digits of Precision": 0,
+    "Suffix": ""
+  },
+  {
+    "Chapter Number": 2,
+    "Chapter": "javascript",
+    "Clue": "What percent of resources loaded by JavaScript are images?",
+    "Answer": "45.60%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 2,
+    "Chapter": "javascript",
+    "Clue": "What percent of websites pages use custom elements?",
+    "Answer": "2.70%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 3,
+    "Chapter": "markup",
+    "Clue": "What percent of favicons use the ICO format, which finally dethroned PNG as the most popular format?",
+    "Answer": "35.30%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 3,
+    "Chapter": "markup",
+    "Clue": "What percent of websites include at least one script element?",
+    "Answer": "98%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 0,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 3,
+    "Chapter": "markup",
+    "Clue": "What is the most form elements found on a single page?",
+    "Answer": "4,256",
+    "Min": 25,
+    "Max": 25000,
+    "Digits of Precision": 0,
+    "Suffix": ""
+  },
+  {
+    "Chapter Number": 13,
+    "Chapter": "mobile-web",
+    "Clue": "What percent of mobile websites use native lazy-loading?",
+    "Answer": "18.40%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 13,
+    "Chapter": "mobile-web",
+    "Clue": "What percent of mobile websites contain inappropriately sized images, as reported by Lighthouse?",
+    "Answer": "43.40%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 13,
+    "Chapter": "mobile-web",
+    "Clue": "What percent of the top 1,000 mobile websites prevent zooming?",
+    "Answer": "45.00%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 19,
+    "Chapter": "page-weight",
+    "Clue": "What is the median number of total bytes (compressed) loaded by a mobile web page?",
+    "Answer": "1,923",
+    "Min": 250,
+    "Max": 12500,
+    "Digits of Precision": 0,
+    "Suffix": ""
+  },
+  {
+    "Chapter Number": 19,
+    "Chapter": "page-weight",
+    "Clue": "What is the median number of image bytes loaded by a mobile web page?",
+    "Answer": 877,
+    "Min": 250,
+    "Max": 12500,
+    "Digits of Precision": 0,
+    "Suffix": ""
+  },
+  {
+    "Chapter Number": 19,
+    "Chapter": "page-weight",
+    "Clue": "What is the median number of requests made by a mobile web page?",
+    "Answer": 69,
+    "Min": 25,
+    "Max": 250,
+    "Digits of Precision": 0,
+    "Suffix": ""
+  },
+  {
+    "Chapter Number": 10,
+    "Chapter": "performance",
+    "Clue": "What percent of the top 1,000 websites pass Core Web Vitals?",
+    "Answer": "37%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 0,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 10,
+    "Chapter": "performance",
+    "Clue": "What percent of websites have an image as their home page's LCP element?",
+    "Answer": "79%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 0,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 10,
+    "Chapter": "performance",
+    "Clue": "What is the longest Total Blocking Time among all 7.5 million mobile home pages?",
+    "Answer": "67 s",
+    "Min": 3,
+    "Max": 300,
+    "Digits of Precision": 0,
+    "Suffix": "s"
+  },
+  {
+    "Chapter Number": 11,
+    "Chapter": "privacy",
+    "Clue": "What percent of websites include at least one tracker?",
+    "Answer": "82.08%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 11,
+    "Chapter": "privacy",
+    "Clue": "What percent of websites contain a privacy policy link?",
+    "Answer": "39.70%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 11,
+    "Chapter": "privacy",
+    "Clue": "What percent of the top 1,000 most popular websites opt out of FLoC cohorts?",
+    "Answer": "4.10%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 15,
+    "Chapter": "pwa",
+    "Clue": "What percent of the top 1,000 most popular websites use service workers?",
+    "Answer": "8.62%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 15,
+    "Chapter": "pwa",
+    "Clue": "What percent of PWAs use the service worker cache?",
+    "Answer": "57.88%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 15,
+    "Chapter": "pwa",
+    "Clue": "What percent of websites with service workers use the Workbox library?",
+    "Answer": "32.19%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 20,
+    "Chapter": "resource-hints",
+    "Clue": "What percent of the top 1,000 most popular websites use the preload resource hint?",
+    "Answer": "44.30%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 20,
+    "Chapter": "resource-hints",
+    "Clue": "What percent of preload hints are unused within the first 3 seconds of page load?",
+    "Answer": "21.50%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 20,
+    "Chapter": "resource-hints",
+    "Clue": "What is the percent growth in adoption of native lazy-loading on images since 2020?",
+    "Answer": "423%",
+    "Min": 0,
+    "Max": 1250,
+    "Digits of Precision": 0,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 12,
+    "Chapter": "security",
+    "Clue": "For the average web page, what percent of requests use HTTPS?",
+    "Answer": "91.10%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 12,
+    "Chapter": "security",
+    "Clue": "What percent of the top 1,000 most popular websites set a Content Security Policy?",
+    "Answer": "22.20%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 12,
+    "Chapter": "security",
+    "Clue": "What percent of websites use a mechanism to fight malicious bots?",
+    "Answer": "10.70%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 8,
+    "Chapter": "seo",
+    "Clue": "What percent of websites don't have a robots.txt file?",
+    "Answer": "16.50%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 8,
+    "Chapter": "seo",
+    "Clue": "What percent of mobile websites don't have a canonical tag?",
+    "Answer": "41.50%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 8,
+    "Chapter": "seo",
+    "Clue": "What percent of mobile websites fail the Core Web Vitals assessment?",
+    "Answer": "67%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 0,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 4,
+    "Chapter": "structured-data",
+    "Clue": "What percent of websites contain JSON-LD markup?",
+    "Answer": "33.53%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 4,
+    "Chapter": "structured-data",
+    "Clue": "What percent of websites include WebSite markup in JSON-LD?",
+    "Answer": "8.90%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 4,
+    "Chapter": "structured-data",
+    "Clue": "What is the greatest number of nested relationships between JSON-LD entities found on the web?",
+    "Answer": 18,
+    "Min": 3,
+    "Max": 75,
+    "Digits of Precision": 0,
+    "Suffix": ""
+  },
+  {
+    "Chapter Number": 7,
+    "Chapter": "third-parties",
+    "Clue": "What percent of websites load third-party content?",
+    "Answer": "94.40%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 7,
+    "Chapter": "third-parties",
+    "Clue": "What is the median duration of main-thread blocking time for a YouTube embed on an emulated Moto G4, as reported by Lighthouse?",
+    "Answer": "1,626 ms",
+    "Min": 50,
+    "Max": 5000,
+    "Digits of Precision": 0,
+    "Suffix": "ms"
+  },
+  {
+    "Chapter Number": 7,
+    "Chapter": "third-parties",
+    "Clue": "For the average web page, what percent of requests are third-party?",
+    "Answer": "45.90%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 6,
+    "Chapter": "webassembly",
+    "Clue": "What is the download size of the largest WebAssembly response?",
+    "Answer": "44 MB",
+    "Min": 0,
+    "Max": 250,
+    "Digits of Precision": 0,
+    "Suffix": "MB"
+  },
+  {
+    "Chapter Number": 6,
+    "Chapter": "webassembly",
+    "Clue": "What percent of WebAssembly responses on mobile are uncompressed?",
+    "Answer": "40.20%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  },
+  {
+    "Chapter Number": 6,
+    "Chapter": "webassembly",
+    "Clue": "What percent of WebAssembly files are loaded from a third-party origin?",
+    "Answer": "55.20%",
+    "Min": 0,
+    "Max": 100,
+    "Digits of Precision": 2,
+    "Suffix": "%"
+  }
+]
