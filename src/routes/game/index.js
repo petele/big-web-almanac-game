@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import Question from './question.js';
+import Question from '../../components/question.js';
 
 // Game state and timer
 
