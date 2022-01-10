@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import Question from '../../components/question.js';
+import Timer from '../../components/timer.js';
 import { getNewQuestion, savePlayedQuestion } from '../../components/questions';
 
 // Game state and timer
@@ -24,7 +25,7 @@ class Game extends Component {
   render(props, state) {
     return (
       <div class="container">
-        {/* Send question, number, answers */}
+        <Timer />
         <Question
           q={state.currentQuestion.Clue}
           num="1"
