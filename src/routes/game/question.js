@@ -4,18 +4,30 @@ const Question = (props) => {
 
   return (
       <div class="question-block">
-        <h2 class="question">
+        <fieldset class="answers">
+          <h2 class="question">
             <span class="question-num">{props.num}. </span> 
-            {props.q}
-        </h2>
-      <div class="answers">
-        <ul class="answer-list">
-          <li>{props.a1}</li>
-          <li>{props.a2}</li>
-          <li>{props.a3}</li>
-          <li>{props.a4}</li>
-        </ul>
-      </div>
+          {props.q}
+          </h2>
+          <div class="answer-list">
+            <div class="answer">
+              <input type="radio" id="a1" name={props.num} value="a1" />
+              <label for="a1">{props.a1}</label>
+            </div>
+            <div class="answer">
+              <input type="radio" id="a2" name={props.num} value="a2" />
+              <label for="a2">{props.a2}</label>
+            </div>
+            <div class="answer">
+              <input type="radio" id="a3" name={props.num} value="a3" />
+              <label for="a3">{props.a3}</label>
+            </div>
+            <div class="answer">
+              <input type="radio" id="a4" name={props.num} value="a4" />
+              <label for="a4">{props.a4}</label>
+            </div>
+          </div>
+      </fieldset>
     </div>
   );
 };
