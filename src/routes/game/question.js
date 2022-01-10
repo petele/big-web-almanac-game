@@ -9,12 +9,24 @@ const Question = (props) => {
             {props.q}
         </h2>
       <div class="answers">
-        <ul class="answer-list">
-          <li>{props.a1}</li>
-          <li>{props.a2}</li>
-          <li>{props.a3}</li>
-          <li>{props.a4}</li>
-        </ul>
+        <div class="answer-list">
+          <div>
+            <input type="radio" id="a1" name={props.a1} value="a1" />
+            <label for="a1">{props.a1}</label>
+          </div>
+          <div>
+            <input type="radio" id="a2" name={props.a2} value="a2" />
+            <label for="a2">{props.a2}</label>
+          </div>
+          <div>
+            <input type="radio" id="a3" name={props.a3} value="a3" />
+            <label for="a3">{props.a3}</label>
+          </div>
+          <div>
+            <input type="radio" id="a4" name={props.a4} value="a4" />
+            <label for="a4">{props.a4}</label>
+          </div>
+        </div>
       </div>
     </div>
   );
