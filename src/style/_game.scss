@@ -15,32 +15,16 @@ fieldset {
 .answer {
   --answer-color: var(--sand);
   --answer-border: var(--star-yellow);
-
-  font-size: 1.5rem;
-  text-align: center;
-  cursor: pointer;
-  border: 4px solid var(--answer-border);
-  background-color: var(--answer-color);
-  transition: border 0.1s, background-color 0.1s;
 }
 
 .correct {
   --answer-border: var(--pine);
   --answer-color: var(--light-pine);
-  --copper-crayola: #d5896f;
-  --coral: #f5c2c2;
 }
 
 .incorrect {
   --answer-border: var(--copper-crayola);
   --answer-color: var(--coral);
-}
-
-.correct {
-  --answer-border: var(--pine);
-  --answer-color: var(--light-pine);
-  --copper-crayola: #d5896f;
-  --coral: #f5c2c2;
 }
 
 .answer input {
@@ -50,4 +34,11 @@ fieldset {
 .answer label {
   padding: 1rem;
   display: block;
+  cursor: pointer;
+
+  font-size: 1.5rem;
+  text-align: center;
+  border: 4px solid var(--answer-border);
+  background-color: var(--answer-color);
+  transition: border 0.1s, background-color 0.1s;
 }
