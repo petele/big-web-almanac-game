@@ -70,6 +70,7 @@ Chapter Number,Chapter,Clue,Answer,Alternate 1,Alternate 2,Alternate 3,Min,Max,D
 1,css,What is the largest number of external images loaded by a page’s CSS?,"6,089",,,,100,100000,0,
 1,css,What is the heaviest total weight of images loaded via CSS?,"314,386 KB",,,,500,500000,0, KB
 1,css,What percent of websites use multicolumn layout?,20%,,,,0,100,0,%
+1,css,What percent of websites use CSS-in-JS?,3%,,,,0,20,0,%
 2,javascript,"For the average web page, what percent of JavaScript bytes are flagged by Lighthouse as unused?",36.2%,,,,0,100,1,%
 2,javascript,What percent of websites set both async and defer attributes on a single script?,35.6%,,,,0,100,1,%
 2,javascript,What is the average percent of all script elements that use both async and defer attributes?,2.6%,,,,0,100,1,%
@@ -80,3 +81,24 @@ Chapter Number,Chapter,Clue,Answer,Alternate 1,Alternate 2,Alternate 3,Min,Max,D
 2,javascript,What percent of websites use Shadow DOM?,0.4%,,,,0,10,1,%
 2,javascript,What percent of websites use template elements?,0.02%,,,,0,5,2,%
 2,javascript,What is the most popular version of jQuery?,3.5.1,1.12.4,4.7.5,2.2.4,,,,
+1,css,What is the most popular CSS class name?,active,disabled,btn,row,,,,
+1,css,What is the most popular CSS ID?,content,footer,main,logo,,,,
+1,css,What is the most popular CSS attribute selectors,type,hidden,class,src,,,,
+1,css,What is the most popular CSS pseudo-classes?,hover,focus,active,first-child,,,,
+1,css,What is the most popular CSS unprefixed pseudo-element?,before,after,first-letter,placeholder,,,,
+1,css,What is the most popular property used with !important?,display,color,width,background-color,,,,
+1,css,What is the most popular length unit used in CSS?,px,%,em,rem,,,,
+1,css,What is the most popular unit used in calc()?,px,%,vh,vw,,,,
+1,css,What is the most popular operator used in calc()?,-,+,/,*,,,,
+1,css,What is the most popular global keyword used in CSS?,inherit,initial,unset,revert,,,,
+1,css,What is the most popular color format used in CSS?,#rrggbb,rgb(),#rgb,rgba(),,,,
+1,css,What is the most popular named color keyword used in CSS?,transparent,white,black,papayawhip,,,,
+1,css,What is the most commonly-declared layout type?,absolute,block,inline-block,flex,,,,
+1,css,What is the most popular property to be changed via media queries?,display,color,width,height,,,,
+1,css,What is the most popular CSS feature to be queried with @supports?,sticky,mask-image,ime-align,grid,,,,
+1,css,What is the most popular CSS property to be given a custom property value?,color,width,font-size,background,,,,
+1,css,What is the most popular type of custom property value?,color,length,font,number,,,,
+1,css,What is the most popular longhand flex property?,flex-basis,flex-direction,flex-grow,flex-wrap,,,,
+1,css,What is the most popular longhand grid property?,grid-template-columns,grid-gap,grid-columns,grid-area,,,,
+1,css,What is the most common shorthand CSS property to be improperly added after its corresponding longhand property?,background,margin,font,list-style,,,,
+1,css,What is the most popular control flow statement used in SCSS?,@if,@for,@each,@while,,,,
