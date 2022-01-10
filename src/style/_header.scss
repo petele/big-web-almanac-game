@@ -1,0 +1,18 @@
+.header {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: auto auto;
+  padding: 1rem;
+  align-items: center;
+}
+
+.about-btn {
+  height: 48px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.logo {
+  max-width: 350px;
+}
