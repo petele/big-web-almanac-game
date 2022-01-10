@@ -14,7 +14,7 @@ export function getNewQuestion() {
   if (numQuestionsRemaining === 0) {
     return null;
   }
-  const questionNumber = generateRandomNumberBetween(0, numQuestionsRemaining);
+  const questionNumber = Math.floor(generateRandomNumberBetween(0, numQuestionsRemaining));
   const question = questionsUnplayed[questionNumber];
   questionsUnplayed.splice(questionNumber, 1);
   return initQuestion(question);

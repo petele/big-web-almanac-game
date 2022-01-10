@@ -27,12 +27,12 @@ class Game extends Component {
       <div class="container">
         <Timer />
         <Question
-          q={state.currentQuestion.Clue}
+          q={state.currentQuestion.question}
           num="1"
-          a1="Answer 1"
-          a2="Answer 2"
-          a3="Answer 3"
-          a4="Answer 4"
+          a1={state.currentQuestion.options[0]}
+          a2={state.currentQuestion.options[1]}
+          a3={state.currentQuestion.options[2]}
+          a4={state.currentQuestion.options[3]}
         />
         <button id="butNextQuest" ref={el => { this._butNextQuestion = el }}>Next Question</button>
       </div>
