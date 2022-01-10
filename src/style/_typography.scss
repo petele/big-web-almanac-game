@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+:root {
+  --font-base: system-ui, serif;
+  --font-header: 'Poppins', serif;
+}
+
+body {
+  font-family: var(--font-base);
+}
+
+h1, h2 {
+  font-family: var(--font-header);
+}

@@ -1,4 +1,7 @@
 import { h } from 'preact';
+import Question from './question.js';
+
+// Game state and timer
 
 const Game = () => {
 
@@ -6,10 +9,15 @@ const Game = () => {
 
   return (
     <div class="container">
-      <h1>Big Web Almanac Quiz</h1>
-      <p>
-        Quiz goes here
-      </p>
+      {/* Send question, number, answers */}
+      <Question 
+        q="What is the meaning of life?" 
+        num="1" 
+        a1="Answer 1" 
+        a2="Answer 2" 
+        a3="Answer 3" 
+        a4="Answer 4"
+      />
     </div>
   );
 };
