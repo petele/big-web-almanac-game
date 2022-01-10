@@ -10,22 +10,10 @@ const Question = (props) => {
           {props.q}
           </h2>
           <div class="answer-list">
-            <div class="answer">
-              <input type="radio" id="a1" name={props.num} value="a1" />
-              <label for="a1">{props.a1}</label>
-            </div>
-            <div class="answer">
-              <input type="radio" id="a2" name={props.num} value="a2" />
-              <label for="a2">{props.a2}</label>
-            </div>
-            <div class="answer">
-              <input type="radio" id="a3" name={props.num} value="a3" />
-              <label for="a3">{props.a3}</label>
-            </div>
-            <div class="answer">
-              <input type="radio" id="a4" name={props.num} value="a4" />
-              <label for="a4">{props.a4}</label>
-            </div>
+            <button class="answer">{props.a1}</button>
+            <button class="answer">{props.a2}</button>
+            <button class="answer">{props.a3}</button>
+            <button class="answer">{props.a4}</button>
           </div>
       </fieldset>
     </div>

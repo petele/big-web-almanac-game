@@ -17,3 +17,10 @@
 .logo {
   max-width: 350px;
 }
+
+@media (max-width: 500px) {
+  .header {
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+}
