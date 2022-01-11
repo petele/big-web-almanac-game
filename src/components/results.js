@@ -14,8 +14,8 @@ class Results extends Component {
       { questions.map((q, i) => {
         return (
           <div className={`response ${q.answerCorrect ? 'correct' : 'incorrect'}`}>
-            <h3>{i + 1}. {q.question}</h3>
-            <p>
+            <h3 class="result-q">{i + 1}. {q.question}</h3>
+            <p class="result-a">
               {q.answerUser}&nbsp;
               <span>
                 ({q.answerCorrect ? 'Correct!' : `Correct answer: ${q.answer}`})
@@ -50,8 +50,8 @@ https://big-web-almanac-game.web.app/`;
 
     return (
       <div class="container">
-        <h2>{score}% correct out of <span>{total}!</span></h2>
-        <p>Nice job! In 60 seconds, you answered <span>{correct}</span> questions correctly out of <span>{total}</span> total questions attempted.</p>
+        <h1 class="result-header">{score}% correct out of <span>{total}!</span></h1>
+        <p class="result-subhead">Nice job! In 60 seconds, you answered <span>{correct}</span> questions correctly out of <span>{total}</span> total questions attempted.</p>
 
         {this.renderShareButton(correct, total, state.questions.questionsPlayed)}
 

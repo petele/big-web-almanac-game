@@ -2,11 +2,15 @@ body {
   padding: 0;
   display: grid;
   line-height: 1.4;
-  max-width: 800px;
   padding: 1rem;
   margin: 0 auto;
   min-height: 100vh;
   place-items: center;
+}
+
+#app {
+  max-width: 800px;
+  width: 100%;
 }
 
 ::selection {

@@ -5,6 +5,17 @@ fieldset {
   border: 7px solid var(--french-blue);
 }
 
+.timer {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.timer span {
+  font-family: var(--font-header);
+  width: 2ch;
+  display: inline-block;
+}
+
 .question {
   min-height: 4.2em;
 }
@@ -83,14 +94,6 @@ fieldset {
 .answer:not(:disabled):focus {
   border-color: var(--copper-crayola);
   background: var(--star-yellow);
-}
-
-.response {
-  background: var(--answer-color);
-  border: 4px solid var(--answer-border);
-  padding: 0.5rem 1rem;
-  line-height: 1;
-  margin-bottom: 1rem;
 }
 
 @keyframes minuteTimer {
