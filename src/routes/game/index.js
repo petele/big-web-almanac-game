@@ -15,7 +15,7 @@ class Game extends Component {
 
   _clickAnswer(e) {
     const selectedAnswer = e.srcElement.innerText;
-    this.saveAndNextQuestion(selectedAnswer);
+    this.saveAndNextQuestion(selectedAnswer, e);
   }
 
   componentWillMount() {
@@ -27,27 +27,32 @@ class Game extends Component {
     return this.state.questions.getNewQuestion();
   }
 
-  saveAndNextQuestion(answer) {
+  saveAndNextQuestion(answer, e) {
     const currentQuestion = this.state.currentQuestion;
     currentQuestion.answerUser = answer;
     const wasAnswerCorrect = answer === currentQuestion.answer;
     currentQuestion.answerCorrect = wasAnswerCorrect;
     this.logAnswer(currentQuestion);
-
+    const clickedAnswer = e.target;
     const answers = document.querySelectorAll('.answer');
+
+    clickedAnswer.classList.add('guessed');
 
     [...answers].forEach((elem) => {
       elem.setAttribute('disabled', true);
 
       if (elem.innerText === currentQuestion.answer) {
         elem.classList.add('correct');
-        setTimeout(() => elem.classList.remove('correct'), 900);
+        setTimeout(() => elem.classList.remove('correct'), 1000);
       } else {
         elem.classList.add('incorrect');
-        setTimeout(() => elem.classList.remove('incorrect'), 900);
+        setTimeout(() => elem.classList.remove('incorrect'), 1000);
       };
 
-      setTimeout(() => elem.removeAttribute('disabled'), 1000);
+      setTimeout(() => {
+        elem.removeAttribute('disabled');
+        elem.classList.remove('guessed');
+      }, 1000);
     });
 
     this.state.questions.savePlayedQuestion(currentQuestion);
@@ -66,6 +71,10 @@ class Game extends Component {
     }, timeout);
   }
 
+  _timerExpired() {
+    this.setState({currentQuestion: null});
+  }
+
   render(props, state) {
     if (!state.currentQuestion) {
       return (
@@ -76,7 +85,7 @@ class Game extends Component {
     }
     return (
       <div class="container">
-        <Timer />
+        <Timer numSec="60" onTimerExpired={this._timerExpired.bind(this)} />
         <Question
           q={state.currentQuestion.question}
           num={state.questions.questionsPlayed.length + 1}
