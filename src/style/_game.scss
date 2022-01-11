@@ -78,31 +78,21 @@ fieldset {
 
 // Houdini timer
 @property --timer {
-  syntax: '<percentage>';
+  syntax: '<string>';
   inherits: false;
-  initial-value: 0%;
+  initial-value: '100%';
 }
 
 .question-block {
-  animation: minuteTimer 60s infinite linear forwards;
   padding: 1rem;
   border-radius: 3rem;
-  background: linear-gradient(to right, var(--star-yellow) var(--timer), var(--sand) var(--timer), var(--sand));
+  background: linear-gradient(to left, var(--star-yellow) var(--timer), var(--sand) var(--timer), var(--sand));
 }
 
 .answer:not(:disabled):hover,
 .answer:not(:disabled):focus {
   border-color: var(--copper-crayola);
   background: var(--star-yellow);
-}
-
-@keyframes minuteTimer {
-  from {
-    --timer: 0%;
-  }
-  to {
-    --timer: 100%;
-  }
 }
 
 @media (max-width: 500px) {
