@@ -76,16 +76,24 @@ class Game extends Component {
 
   showNextQuestion(timeout) {
     setTimeout(() => {
-      this.setState({ currentQuestion: this.getNewQuestion() });
+      const nextQuestion = this.getNewQuestion();
+      if (nextQuestion) {
+        this.setState({ currentQuestion: nextQuestion });
+        return;
+      }
+      this.setState({isPlaying: false});
     }, timeout);
   }
 
   _timerExpired() {
-    this.setState({currentQuestion: null});
+    this.setState({
+      isPlaying: false,
+      currentQuestion: null,
+    });
   }
 
   render(props, state) {
-    if (!state.currentQuestion) {
+    if (!state.isPlaying) {
       return (
         <Results
           questions={state.questions}
