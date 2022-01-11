@@ -23,6 +23,7 @@ fieldset {
   padding: 1rem;
   display: block;
   cursor: pointer;
+  position: relative;
 
   font-size: 1.5rem;
   text-align: center;
@@ -38,6 +39,13 @@ fieldset {
 .correct {
   --answer-border: var(--pine);
   --answer-color: var(--light-pine);
+}
+.correct::after {
+  content: '✔';
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .incorrect {
