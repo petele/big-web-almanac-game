@@ -32,6 +32,7 @@ class Game extends Component {
     currentQuestion.answerUser = answer;
     const wasAnswerCorrect = answer === currentQuestion.answer;
     currentQuestion.answerCorrect = wasAnswerCorrect;
+    this.logAnswer(currentQuestion);
 
     const answers = document.querySelectorAll('.answer');
 
@@ -51,6 +52,12 @@ class Game extends Component {
 
     this.state.questions.savePlayedQuestion(currentQuestion);
     this.showNextQuestion(1000);
+  }
+
+  logAnswer(question) {
+    gtag('event', 'answer', {
+      value: question.answerCorrect ? 1 : 0
+    })
   }
 
   showNextQuestion(timeout) {
