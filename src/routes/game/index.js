@@ -71,6 +71,10 @@ class Game extends Component {
     }, timeout);
   }
 
+  _timerExpired() {
+    this.setState({currentQuestion: null});
+  }
+
   render(props, state) {
     if (!state.currentQuestion) {
       return (
@@ -81,7 +85,7 @@ class Game extends Component {
     }
     return (
       <div class="container">
-        <Timer />
+        <Timer numSec="60" onTimerExpired={this._timerExpired.bind(this)} />
         <Question
           q={state.currentQuestion.question}
           num={state.questions.questionsPlayed.length + 1}
