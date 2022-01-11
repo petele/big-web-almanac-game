@@ -23,12 +23,6 @@ class Game extends Component {
     this.state.currentQuestion = this.getNewQuestion();
   }
 
-  componentDidMount() {
-    this._butNextQuestion.addEventListener('click', () => {
-      this.saveAndNextQuestion(e);
-    });
-  }
-
   getNewQuestion() {
     return this.state.questions.getNewQuestion();
   }
@@ -78,14 +72,13 @@ class Game extends Component {
         <Timer />
         <Question
           q={state.currentQuestion.question}
-          num={state.questions.questionsPlayed.length}
+          num={state.questions.questionsPlayed.length + 1}
           a1={state.currentQuestion.options[0]}
           a2={state.currentQuestion.options[1]}
           a3={state.currentQuestion.options[2]}
           a4={state.currentQuestion.options[3]}
           answerClick={this._clickAnswer.bind(this)}
         />
-        <button id="butNextQuest" ref={el => { this._butNextQuestion = el }}>Next Question</button>
       </div>
     );
   }

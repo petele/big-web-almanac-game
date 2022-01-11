@@ -44,8 +44,12 @@ fieldset {
   content: '✔';
   font-size: 2rem;
   position: absolute;
+  height: 100%;
+  right: 0.6rem;
   top: 0;
-  right: 0;
+  display: grid;
+  align-items: center;
+  color: var(--pine);
 }
 
 .incorrect {
