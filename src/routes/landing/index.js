@@ -25,7 +25,7 @@ const Landing = () => {
           <h3>CSS</h3>
         </Link>
         </li>
-        <li><Link class="category" href="/play?chapter=js">
+        <li><Link class="category" href="/play?chapter=javascript">
           <img src="../static/img/character-hat.png" />
           <h3>JavaScript</h3>
         </Link>
