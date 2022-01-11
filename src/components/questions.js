@@ -2,40 +2,56 @@ import questionsUnplayed from '../data/answerKey.json';
 import { getChapterName, getChapterUrl } from '../util/almanac.js';
 
 const NUM_CANDIDATE_ANSWERS = 3;
-const questionsPlayed = [];
 
-/**
- * Gets a random question from the list of questions
- *
- * @returns {object}
- */
-export function getNewQuestion() {
-  const url = new URL(location.href);
-  const optChapter = url.searchParams.get('chapter');
-  let candidateQuestions = questionsUnplayed;
-  if (optChapter) {
-    // Filter questions for only the requested chapter.
-    candidateQuestions = candidateQuestions.filter(question => {
-      return question['Chapter'] == optChapter;
-    });
+export default class Questions {
+
+  constructor() {
+    this.questionBank = questionsUnplayed;
+    this.questionsPlayed = [];
+
+    this.initQuestions();
   }
-  const numQuestionsRemaining = candidateQuestions.length;
-  if (numQuestionsRemaining === 0) {
-    return null;
+
+  initQuestions() {
+    const optChapter = getChapter();
+    if (optChapter) {
+      // Filter questions for only the requested chapter.
+      this.questionBank = this.questionBank.filter(question => {
+        return question['Chapter'] == optChapter;
+      });
+    }
   }
-  const questionNumber = Math.floor(generateRandomNumberBetween(0, numQuestionsRemaining));
-  const question = candidateQuestions[questionNumber];
-  candidateQuestions.splice(questionNumber, 1);
-  return initQuestion(question);
+
+  /**
+   * Gets a random question from the list of questions
+   *
+   * @returns {object}
+   */
+  getNewQuestion() {
+    const numQuestionsRemaining = this.questionBank.length;
+    if (numQuestionsRemaining === 0) {
+      return null;
+    }
+    const questionNumber = Math.floor(generateRandomNumberBetween(0, numQuestionsRemaining));
+    const question = this.questionBank[questionNumber];
+    this.questionBank.splice(questionNumber, 1);
+    return initQuestion(question);
+  }
+
+  /**
+   * Saves an answered question to the question list.
+   *
+   * @param {object} question Save an answered question to the list
+   */
+  savePlayedQuestion(question) {
+    this.questionsPlayed.push(question);
+  }
+
 }
 
-/**
- * Saves an answered question to the question list.
- *
- * @param {object} item Save an answered question to the list
- */
-export function savePlayedQuestion(item) {
-  questionsPlayed.push(item);
+function getChapter() {
+  const url = new URL(location.href);
+  return url.searchParams.get('chapter');
 }
 
 function initQuestion(question) {
