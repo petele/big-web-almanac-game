@@ -65,7 +65,13 @@ function generateCandidateAnswers(question) {
   const precision = question['Digits of Precision'];
   const suffix = question['Suffix'];
 
-  return candidateAnswers.map(_ => generateRandomValue(min, max, precision, suffix));
+  return candidateAnswers.map(_ => {
+    let value;
+    do {
+      value = generateRandomValue(min, max, precision, suffix;
+    } while (value != question['Answer']);
+    return value;
+  });
 }
 
 // Randomizes the order of an array in place.
