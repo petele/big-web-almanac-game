@@ -12,14 +12,23 @@ class Game extends Component {
 
   _butNextQuestion = null;
 
+  _pete(e) {
+    console.log('yes', e.srcElement.innerText);
+    console.log('this', this);
+    //this.saveAndNextQuestion();
+  }
 
   componentDidMount() {
     this._butNextQuestion.addEventListener('click', () => {
-      const currentQuestion = this.state.currentQuestion;
-      currentQuestion.answer = 'pete';
-      savePlayedQuestion(currentQuestion);
-      this.setState({ currentQuestion: getNewQuestion() });
+      this.saveAndNextQuestion();
     });
+  }
+
+  saveAndNextQuestion() {
+    const currentQuestion = this.state.currentQuestion;
+    currentQuestion.answer = 'pete';
+    savePlayedQuestion(currentQuestion);
+    this.setState({ currentQuestion: getNewQuestion() });
   }
 
   render(props, state) {
@@ -33,6 +42,7 @@ class Game extends Component {
           a2={state.currentQuestion.options[1]}
           a3={state.currentQuestion.options[2]}
           a4={state.currentQuestion.options[3]}
+          answerClick={this._pete}
         />
         <button id="butNextQuest" ref={el => { this._butNextQuestion = el }}>Next Question</button>
       </div>
