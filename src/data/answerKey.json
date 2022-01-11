@@ -67,7 +67,7 @@
   {
     "Chapter Number": 14,
     "Chapter": "capabilities",
-    "Clue": "What percent of websites use Declarative Link Capturing?",
+    "Clue": "How many websites use Declarative Link Capturing?",
     "Answer": 11,
     "Alternate 1": "",
     "Alternate 2": "",
@@ -359,7 +359,7 @@
     "Alternate 2": "",
     "Alternate 3": "",
     "Min": 0,
-    "Max": 25,
+    "Max": 50,
     "Digits of Precision": 0,
     "Suffix": ""
   },

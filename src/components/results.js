@@ -9,17 +9,15 @@ class Results extends Component {
   }
 
   renderResponses(questions) {
-    console.log('renderResponses', questions)
-
     return (
       <div class="responses">
-      { questions.map(q => {
+      { questions.map((q, i) => {
         return (
-          <div class="response">
-            <h3>{q.question}</h3>
+          <div class="response {q.answerCorrect ? 'correct' : 'incorrect'}">
+            <h3>{i}. {q.question}</h3>
             <p>
               {q.answerUser}&nbsp;
-              <span class="{q.answerCorrect ? 'correct' : 'incorrect'}">
+              <span>
                 ({q.answerCorrect ? 'Correct!' : `Correct answer: ${q.answer}`})
               </span>
             </p>
