@@ -6,7 +6,7 @@ import { Router } from 'preact-router';
 import NotFound from '../routes/404';
 import Landing from '../routes/landing';
 import Game from '../routes/game';
-import Header from '../static/header.js';
+import Header from '../components/header.js';
 
 class App extends Component {
 
