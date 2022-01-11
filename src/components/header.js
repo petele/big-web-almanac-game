@@ -8,9 +8,9 @@ const Header = () => {
       <Link href="/" label="Home" aria-label="Home">
         <img class='logo' src='../img/logo.png' />
       </Link>
-      <button class='about-btn'>
+      <Link href="/about" class='about-btn'>
         <img src="../img/character-file.png" alt="about" />
-      </button>
+      </Link>
     </div>
   );
 };

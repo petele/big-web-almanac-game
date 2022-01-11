@@ -12,3 +12,12 @@ body {
 h1, h2 {
   font-family: var(--font-header);
 }
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+a {
+  color: var(--french-blue);
+}

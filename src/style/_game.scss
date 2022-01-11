@@ -86,6 +86,7 @@ fieldset {
 .question-block {
   padding: 1rem;
   border-radius: 3rem;
+  background: var(--sand);
   background: linear-gradient(to left, var(--star-yellow) var(--timer), var(--sand) var(--timer), var(--sand));
 }
 
