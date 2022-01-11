@@ -40,7 +40,10 @@ ${questions.map(({answerCorrect}) => answerCorrect ? '🟩' : '⬜️').join('')
 https://big-web-almanac-game.web.app/`;
 
     return (
-      <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`}>Share your results</a>
+      <a class="share-button" href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`}>
+        <img src="../static/img/twitter-logo-blue.svg" />
+        <p>Share your results</p>
+      </a>
     );
   }
 
@@ -54,11 +57,14 @@ https://big-web-almanac-game.web.app/`;
 
     return (
       <div class="container">
-        <h1 class="result-header">{score}% correct out of <span>{total}!</span></h1>
-        <p class="result-subhead">Nice job! In 60 seconds, you answered <span>{correct}</span> questions correctly out of <span>{total}</span> total questions attempted.</p>
+        <div class="result-block">
+          <h1 class="result-header">{score}% correct out of <span>{total}!</span></h1>
+          <p class="result-subhead">Nice job! In 60 seconds, you answered <span>{correct}</span> questions correctly out of <span>{total}</span> total questions attempted.</p>
 
-        {this.renderShareButton(correct, total, state.questions.questionsPlayed)}
+          {this.renderShareButton(correct, total, state.questions.questionsPlayed)}
+        </div>
 
+        <h2>Let's review your results:</h2>
         {this.renderResponses(state.questions.questionsPlayed)}
       </div>
     );

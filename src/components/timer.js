@@ -9,7 +9,7 @@ const Timer = (props) => {
   useEffect(() => {
     let myInterval = setInterval(() => {
       if (seconds > 0) {
-        let percentRemaining = `${seconds / 60 * 100}%`;
+        let percentRemaining = `${seconds / numSec * 100}%`;
         setSeconds(seconds - 1);
         document.body.style.setProperty("--timer", percentRemaining);
       }
