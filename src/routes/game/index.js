@@ -26,10 +26,16 @@ class Game extends Component {
   saveAndNextQuestion(answer) {
     const currentQuestion = this.state.currentQuestion;
     currentQuestion.answerUser = answer;
-    currentQuestion.answerCorrect = answer === currentQuestion.answer;
-    console.log(currentQuestion);
+    const wasAnswerCorrect = answer === currentQuestion.answer;
+    currentQuestion.answerCorrect = wasAnswerCorrect;
     savePlayedQuestion(currentQuestion);
-    this.setState({ currentQuestion: getNewQuestion() });
+    this.showNextQuestion(2500);
+  }
+
+  showNextQuestion(timeout) {
+    setTimeout(() => {
+      this.setState({ currentQuestion: getNewQuestion() });
+    }, timeout);
   }
 
   render(props, state) {
