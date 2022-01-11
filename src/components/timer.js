@@ -9,7 +9,9 @@ const Timer = (props) => {
   useEffect(() => {
     let myInterval = setInterval(() => {
       if (seconds > 0) {
+        let percentRemaining = `${seconds / 60 * 100}%`;
         setSeconds(seconds - 1);
+        document.body.style.setProperty("--timer", percentRemaining);
       }
     }, 1000);
 
@@ -22,9 +24,9 @@ const Timer = (props) => {
   });
 
   return (
-    <div class="timer">
-      <p>Timer: <span>{seconds}</span> seconds remaining</p>
-    </div>
+    <p class="timer">
+      Timer: <span>{seconds}</span> seconds remaining
+    </p>
   );
 };
 
