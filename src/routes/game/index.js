@@ -7,7 +7,7 @@ import { getNewQuestion, savePlayedQuestion } from '../../components/questions';
 
 class Game extends Component {
   state = {
-    currentQuestion: getNewQuestion(),
+    currentQuestion: getNewQuestion()
   };
 
   _butNextQuestion = null;
@@ -19,7 +19,7 @@ class Game extends Component {
 
   componentDidMount() {
     this._butNextQuestion.addEventListener('click', () => {
-      this.saveAndNextQuestion();
+      this.saveAndNextQuestion(e);
     });
   }
 
@@ -28,8 +28,21 @@ class Game extends Component {
     currentQuestion.answerUser = answer;
     const wasAnswerCorrect = answer === currentQuestion.answer;
     currentQuestion.answerCorrect = wasAnswerCorrect;
+
+    const answers = document.querySelectorAll('.answer');
+
+    [...answers].forEach((elem) => {
+      if (elem.innerText === currentQuestion.answer) {
+        elem.classList.add('correct');
+        setTimeout(() => elem.classList.remove('correct'), 900);
+      } else {
+        elem.classList.add('incorrect');
+        setTimeout(() => elem.classList.remove('incorrect'), 900);
+      }
+    });
+
     savePlayedQuestion(currentQuestion);
-    this.showNextQuestion(2500);
+    this.showNextQuestion(1000);
   }
 
   showNextQuestion(timeout) {
