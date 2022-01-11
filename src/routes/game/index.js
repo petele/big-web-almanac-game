@@ -8,7 +8,8 @@ import Results from '../../components/results';
 
 class Game extends Component {
   state = {
-    isPlaying: true
+    isPlaying: true,
+    startAt: Date.now(),
   };
 
   _butNextQuestion = null;
@@ -102,7 +103,7 @@ class Game extends Component {
     }
     return (
       <div class="container">
-        <Timer numSec="60" onTimerExpired={this._timerExpired.bind(this)} />
+        <Timer startAt={state.startAt} numSec="60" onTimerExpired={this._timerExpired.bind(this)} />
         <Question
           q={state.currentQuestion.question}
           num={state.questions.questionsPlayed.length + 1}
