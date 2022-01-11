@@ -16,9 +16,13 @@ export default class Questions {
     const optChapter = getChapter();
     if (optChapter) {
       // Filter questions for only the requested chapter.
-      this.questionBank = this.questionBank.filter(question => {
+      const filteredQuestions = this.questionBank.filter(question => {
         return question['Chapter'] == optChapter;
       });
+      // Ensure we're not filtering by a bogus chapter.
+      if (filteredQuestions.length) {
+        this.questionBank = filteredQuestions;
+      }
     }
   }
 
