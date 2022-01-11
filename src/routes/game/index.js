@@ -13,8 +13,8 @@ class Game extends Component {
   _butNextQuestion = null;
 
   _clickAnswer(e) {
-    console.log('yes', e.srcElement.innerText);
-    this.saveAndNextQuestion();
+    const selectedAnswer = e.srcElement.innerText;
+    this.saveAndNextQuestion(selectedAnswer);
   }
 
   componentDidMount() {
@@ -23,9 +23,11 @@ class Game extends Component {
     });
   }
 
-  saveAndNextQuestion() {
+  saveAndNextQuestion(answer) {
     const currentQuestion = this.state.currentQuestion;
-    currentQuestion.answer = 'pete';
+    currentQuestion.answerUser = answer;
+    currentQuestion.answerCorrect = answer === currentQuestion.answer;
+    console.log(currentQuestion);
     savePlayedQuestion(currentQuestion);
     this.setState({ currentQuestion: getNewQuestion() });
   }
