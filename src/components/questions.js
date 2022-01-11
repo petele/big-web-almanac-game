@@ -10,13 +10,22 @@ const questionsPlayed = [];
  * @returns {object}
  */
 export function getNewQuestion() {
-  const numQuestionsRemaining = questionsUnplayed.length;
+  const url = new URL(location.href);
+  const optChapter = url.searchParams.get('chapter');
+  let candidateQuestions = questionsUnplayed;
+  if (optChapter) {
+    // Filter questions for only the requested chapter.
+    candidateQuestions = candidateQuestions.filter(question => {
+      return question['Chapter'] == optChapter;
+    });
+  }
+  const numQuestionsRemaining = candidateQuestions.length;
   if (numQuestionsRemaining === 0) {
     return null;
   }
   const questionNumber = Math.floor(generateRandomNumberBetween(0, numQuestionsRemaining));
-  const question = questionsUnplayed[questionNumber];
-  questionsUnplayed.splice(questionNumber, 1);
+  const question = candidateQuestions[questionNumber];
+  candidateQuestions.splice(questionNumber, 1);
   return initQuestion(question);
 }
 
@@ -68,8 +77,8 @@ function generateCandidateAnswers(question) {
   return candidateAnswers.map(_ => {
     let value;
     do {
-      value = generateRandomValue(min, max, precision, suffix;
-    } while (value != question['Answer']);
+      value = generateRandomValue(min, max, precision, suffix);
+    } while (value == question['Answer']);
     return value;
   });
 }

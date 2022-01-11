@@ -575,13 +575,13 @@
     "Chapter Number": 11,
     "Chapter": "privacy",
     "Clue": "What percent of the top 1,000 most popular websites opt out of FLoC cohorts?",
-    "Answer": "4.10%",
+    "Answer": "4.1%",
     "Alternate 1": "",
     "Alternate 2": "",
     "Alternate 3": "",
     "Min": 0,
     "Max": 100,
-    "Digits of Precision": 2,
+    "Digits of Precision": 1,
     "Suffix": "%"
   },
   {
