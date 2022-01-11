@@ -69,6 +69,7 @@ class Game extends Component {
     if (!state.currentQuestion) {
       return (
         <Results
+          questions={state.questions}
         />
       );
     }
