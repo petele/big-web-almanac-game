@@ -32,13 +32,17 @@ class Game extends Component {
     const answers = document.querySelectorAll('.answer');
 
     [...answers].forEach((elem) => {
+      elem.setAttribute('disabled', true);
+
       if (elem.innerText === currentQuestion.answer) {
         elem.classList.add('correct');
         setTimeout(() => elem.classList.remove('correct'), 900);
       } else {
         elem.classList.add('incorrect');
         setTimeout(() => elem.classList.remove('incorrect'), 900);
-      }
+      };
+
+      setTimeout(() => elem.removeAttribute('disabled'), 1000);
     });
 
     savePlayedQuestion(currentQuestion);
