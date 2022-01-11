@@ -40,8 +40,8 @@ fieldset {
   --answer-border: var(--pine);
   --answer-color: var(--light-pine);
 }
-.correct::after {
-  content: '✔';
+
+.guessed::after {
   font-size: 2rem;
   position: absolute;
   height: 100%;
@@ -50,6 +50,14 @@ fieldset {
   display: grid;
   align-items: center;
   color: var(--pine);
+}
+
+.guessed.correct::after {
+  content: '✔';
+}
+
+.guessed.incorrect::after {
+  content: '✔';
 }
 
 .incorrect {
