@@ -27,12 +27,21 @@ class Game extends Component {
     return this.state.questions.getNewQuestion();
   }
 
-  saveAndNextQuestion(answer, e) {
+  checkAnswerCorrect(user, actual) {
+    return user == actual;
+  }
+
+  saveAndNextQuestion(answerUser, e) {
     const currentQuestion = this.state.currentQuestion;
-    currentQuestion.answerUser = answer;
-    const wasAnswerCorrect = answer === currentQuestion.answer;
-    currentQuestion.answerCorrect = wasAnswerCorrect;
+    const answerActual = currentQuestion.answer;
+
+    const isAnswerCorrect = this.checkAnswerCorrect(answerUser, answerActual);
+
+    currentQuestion.answerUser = answerUser;
+    currentQuestion.answerCorrect = isAnswerCorrect;
+
     this.logAnswer(currentQuestion);
+
     const clickedAnswer = e.target;
     const answers = document.querySelectorAll('.answer');
 
@@ -41,13 +50,13 @@ class Game extends Component {
     [...answers].forEach((elem) => {
       elem.setAttribute('disabled', true);
 
-      if (elem.innerText === currentQuestion.answer) {
+      if (this.checkAnswerCorrect(elem.innerText, currentQuestion.answer)) {
         elem.classList.add('correct');
         setTimeout(() => elem.classList.remove('correct'), 1000);
       } else {
         elem.classList.add('incorrect');
         setTimeout(() => elem.classList.remove('incorrect'), 1000);
-      };
+      }
 
       setTimeout(() => {
         elem.removeAttribute('disabled');
