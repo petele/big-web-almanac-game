@@ -57,7 +57,7 @@ class Game extends Component {
   logAnswer(question) {
     gtag('event', 'answer', {
       value: question.answerCorrect ? 1 : 0
-    })
+    });
   }
 
   showNextQuestion(timeout) {
