@@ -1,7 +1,6 @@
 fieldset {
   padding: 1rem 2rem 2rem;
   background: var(--north-carolina-blue);
-  // box-shadow: 0 10px 30px var(--carolina-blue);
   border-radius: 2rem;
   border: 7px solid var(--french-blue);
 }
@@ -84,6 +83,14 @@ fieldset {
 .answer:not(:disabled):focus {
   border-color: var(--copper-crayola);
   background: var(--star-yellow);
+}
+
+.response {
+  background: var(--answer-color);
+  border: 4px solid var(--answer-border);
+  padding: 0.5rem 1rem;
+  line-height: 1;
+  margin-bottom: 1rem;
 }
 
 @keyframes minuteTimer {

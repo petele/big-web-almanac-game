@@ -14,7 +14,7 @@ class Results extends Component {
       { questions.map((q, i) => {
         return (
           <div className={`response ${q.answerCorrect ? 'correct' : 'incorrect'}`}>
-            <h3>{i}. {q.question}</h3>
+            <h3>{i + 1}. {q.question}</h3>
             <p>
               {q.answerUser}&nbsp;
               <span>
