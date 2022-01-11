@@ -22,9 +22,9 @@ const Timer = (props) => {
   });
 
   return (
-    <div class="timer">
-      <p>Timer: <span>{seconds}</span> seconds remaining</p>
-    </div>
+    <p class="timer">
+      Timer: <span>{seconds}</span> seconds remaining
+    </p>
   );
 };
 
