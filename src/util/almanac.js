@@ -26,8 +26,8 @@ const CHAPTER_NAME_MAP = {
     "http": "HTTP"
 };
 
-export function getChapterUrl(question) {
-    return `${WEB_ALMANAC_BASE}${question['Chapter']}`;
+export function getChapterUrl(chapter) {
+    return `${WEB_ALMANAC_BASE}${chapter}`;
 }
 
 export function getChapterName(chapter) {

@@ -18,7 +18,11 @@ class Results extends Component {
             <p class="result-a">
               {q.answerUser}&nbsp;
               <span>
-                ({q.answerCorrect ? 'Correct!' : `Correct answer: ${q.answer}`})
+                ({
+                  q.answerCorrect ?
+                  'Correct!' :
+                  <a href={`${q.chapterUrl}`} title={`Read the ${q.chapterName} chapter`}>Correct answer: {q.answer}</a>
+                })
               </span>
             </p>
           </div>
