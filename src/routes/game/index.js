@@ -12,10 +12,9 @@ class Game extends Component {
 
   _butNextQuestion = null;
 
-  _pete(e) {
+  _clickAnswer(e) {
     console.log('yes', e.srcElement.innerText);
-    console.log('this', this);
-    //this.saveAndNextQuestion();
+    this.saveAndNextQuestion();
   }
 
   componentDidMount() {
@@ -42,7 +41,7 @@ class Game extends Component {
           a2={state.currentQuestion.options[1]}
           a3={state.currentQuestion.options[2]}
           a4={state.currentQuestion.options[3]}
-          answerClick={this._pete}
+          answerClick={this._clickAnswer.bind(this)}
         />
         <button id="butNextQuest" ref={el => { this._butNextQuestion = el }}>Next Question</button>
       </div>
