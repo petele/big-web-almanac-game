@@ -25,7 +25,7 @@ const Timer = (props) => {
 
   return (
     <p class="timer">
-      Timer: <span>{seconds}</span> seconds remaining
+      <span>{seconds}</span> seconds remaining
     </p>
   );
 };
