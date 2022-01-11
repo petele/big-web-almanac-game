@@ -1,0 +1,38 @@
+.response {
+    background: var(--answer-color);
+    border: 4px solid var(--answer-border);
+    padding: 0.5rem 1rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.result-header {
+    background: var(--star-yellow);
+    font-size: 2.5rem;
+    padding: 0 0.25em;
+    display: inline-block;
+}
+
+.result-subhead {
+    color: var(--indigo-dye);
+    font-size: 1.25rem;
+    margin-top: 0;
+    max-width: 42ch;
+}
+
+.result-subhead span {
+    background: var(--star-yellow);
+    color: black;
+    padding: 0 0.25em;
+}
+
+.result-q {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.result-a {
+    font-weight: 800;
+    text-align: right;
+    font-family: var(--font-header);
+}
