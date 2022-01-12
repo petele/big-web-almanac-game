@@ -21,12 +21,18 @@ const Landing = () => {
 
       <ul class="categories">
         <li><Link class="category" href="/play?chapter=css">
-          <img src="../static/img/character-painter.png" />
+          <picture>
+            <source srcset="../static/img/character-painter.avif" type="image/avif" />
+            <img src="../static/img/character-painter.png" />
+          </picture>
           <h3>CSS</h3>
         </Link>
         </li>
         <li><Link class="category" href="/play?chapter=javascript">
-          <img src="../static/img/character-hat.png" />
+          <picture>
+            <source srcset="../static/img/character-hat.avif" type="image/avif" />
+            <img src="../static/img/character-hat.png" />
+          </picture>
           <h3>JavaScript</h3>
         </Link>
         </li>
