@@ -2,3 +2,9 @@
   font-size: small;
   color: var(--oxford-blue);
 }
+
+@media (prefers-color-scheme: dark) {
+  .about-text {
+    color: var(--carolina-blue)
+  }
+}

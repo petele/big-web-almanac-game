@@ -135,3 +135,33 @@
         font-size: 1rem;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .result-block {
+        border-color: var(--go-go-green);
+    }
+
+    .result-header {
+        color: black;
+    }
+
+    .result-subhead {
+        color: var(--ghost-white);
+    }
+
+    .correct {
+        background-color: var(--dark-forest);
+    }
+
+    .incorrect {
+        background-color: var(--brick);
+    }
+
+    .response a {
+        color: white;
+    }
+
+    .play-again {
+        background-color: var(--french-blue);
+    }
+}
