@@ -21,7 +21,7 @@ class Results extends Component {
           <div className={`response ${q.answerCorrect ? 'correct' : 'incorrect'}`}>
             <h3 class="result-q">{i + 1}. {q.question}</h3>
             <p class="result-a">
-              {q.answerUser}<br>
+              {q.answerUser}<br/>
               <span>
                 ({
                   q.answerCorrect ?

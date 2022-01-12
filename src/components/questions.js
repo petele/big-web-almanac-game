@@ -36,7 +36,7 @@ export default class Questions {
     if (numQuestionsRemaining === 0) {
       return null;
     }
-    const questionNumber = Math.floor(generateRandomNumberBetween(0, numQuestionsRemaining));
+    const questionNumber = Math.floor(generateRandomValue(0, numQuestionsRemaining));
     const question = this.questionBank[questionNumber];
     this.questionBank.splice(questionNumber, 1);
     return initQuestion(question);
@@ -60,9 +60,19 @@ function getChapter() {
 
 function initQuestion(question) {
   const chapterId = question['Chapter'];
+  const clue = question['Clue'];
+  const precision = question['Digits of Precision'];
+  const suffix = question['Suffix'];
+
+  let answer = question['Answer'];
+  const shouldFormatAnswer = question['Alternate 1'] == '';
+  if (shouldFormatAnswer) {
+    answer = formatValue(answer, precision, suffix)
+  }
+
   return {
-    question: question['Clue'],
-    answer: question['Answer'],
+    question: clue,
+    answer: answer,
     options: getShuffledAnswers(question),
     chapterName: getChapterName(chapterId),
     chapterUrl: getChapterUrl(chapterId) 
@@ -71,7 +81,6 @@ function initQuestion(question) {
 
 function getShuffledAnswers(question) {
   const answers = generateCandidateAnswers(question);
-  answers.push(question['Answer']);
   shuffleCandidateAnswers(answers);
   return answers;
 }
@@ -79,63 +88,63 @@ function getShuffledAnswers(question) {
 // Get a list of incorrect candidate answers.
 function generateCandidateAnswers(question) {
   // If there are predefined candidates, use those.
-  if (question['Alternate 1']) {
+  if (question['Alternate 1'] != '') {
     return Object.entries(question).filter(([name, value]) => {
       return name.startsWith('Alternate');
-    }).map(([name, value]) => value);
+    }).map(([name, value]) => value).concat([question['Answer']]);
   }
 
   // Randomly generate candidates.
-  const candidateAnswers = new Array(NUM_CANDIDATE_ANSWERS);
-  candidateAnswers.fill(null);
-
+  let value = parseInt(question['Answer'], 10);
+  const candidateAnswers = [value];
   const min = question['Min'];
   const max = question['Max'];
   const precision = question['Digits of Precision'];
   const suffix = question['Suffix'];
 
-  return candidateAnswers.map(_ => {
-    let value;
-    do {
-      value = generateRandomValue(min, max, precision, suffix);
-    } while (value == question['Answer']);
-    return value;
+  while (candidateAnswers.length <= NUM_CANDIDATE_ANSWERS) {
+    value = generateRandomValue(min, max);
+
+    if (isTooClose(min, max, value, candidateAnswers)) {
+      // Discard the random value if it's too close to the other candidates.
+      continue;
+    }
+
+    candidateAnswers.push(value);
+  }
+
+  return candidateAnswers.map(value => formatValue(value, precision, suffix));
+}
+
+function isTooClose(min, max, value, answers) {
+  // No two values should be within 10% of the candidate range.
+  const tooClose = 0.1;
+  const valueBuffer = tooClose * (max - min)
+  return answers.some(answer => {
+    return Math.abs(parseInt(value, 10) - parseInt(answer, 10)) <= valueBuffer;
   });
 }
 
 // Randomizes the order of an array in place.
 function shuffleCandidateAnswers(candidateAnswers) {
   for (let i = 0, n = candidateAnswers.length; i < n; i++) {
-    const randomIndex = Math.floor(generateRandomNumberBetween(i, n));
+    const randomIndex = Math.floor(generateRandomValue(i, n));
     const temp = candidateAnswers[randomIndex];
     candidateAnswers[randomIndex] = candidateAnswers[i];
     candidateAnswers[i] = temp;
   }
 }
 
-// Generate a random number between `min` and `max` with `precision` digits of precision, labelled by `suffix`.
-// Use en-US thousands formatting for values similar to "1,000".
-//
-// Example:
-//     // '15.80%'
-//     generateRandomValue(0, 100, 2, '%');
-function generateRandomValue(min, max, precision, suffix) {
+// Generate a random number between `min` and `max`.
+function generateRandomValue(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+function formatValue(value, precision, suffix) {
   const numberFormatter = new Intl.NumberFormat('en-US', {
     minimumFractionDigits: precision,
     maximumFractionDigits: precision
   });
-  const randomValue = generateRandomNumberBetween(min, max);
-  const formattedRandomValue = numberFormatter.format(randomValue);
-  return `${formattedRandomValue}${suffix}`;
-}
-
-/**
- * Generates a random number between the min (inclusive) and max (exclusive) provided.
- *
- * @param {number} min Minimum number in random range.
- * @param {number} max Maximum number in random range.
- * @returns {number}
- */
-function generateRandomNumberBetween(min, max) {
-  return Math.random() * (max - min) + min;
+  const formattedValue = numberFormatter.format(value);
+  return `${formattedValue}${suffix}`;
 }
