@@ -48,6 +48,7 @@
     text-align: right;
 }
 
+.install-button,
 .share-button,
 .play-again {
     vertical-align: middle;
@@ -69,6 +70,7 @@
     font-size: 1.2rem;
 }
 
+.install-button,
 .play-again {
     display: inline-block;
     background: var(--indigo-dye);
@@ -76,6 +78,7 @@
     margin-top: 1.5rem;
 }
 
+.install-button:hover,
 .play-again:hover {
     background-color: var(--french-blue);
 }
@@ -117,7 +120,7 @@
         padding: 1.5rem;
         margin: 1rem 0;
     }
-    
+
     .result-q,
     .result-a {
         font-weight: 500;

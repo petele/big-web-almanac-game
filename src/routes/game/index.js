@@ -113,6 +113,7 @@ class Game extends Component {
       return (
         <Results
           questions={state.questions}
+          install={props.install}
         />
       );
     }

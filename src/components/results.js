@@ -2,6 +2,14 @@ import { h, Component } from 'preact';
 
 class Results extends Component {
 
+  clickInstall() {
+    if (!this.props.install) {
+      console.log('no beforeInstallPrompt event');
+      return;
+    }
+    this.props.install.prompt();
+  }
+
   logScore(score) {
     gtag('event', 'score', {
       value: score
@@ -84,6 +92,9 @@ ${APP_URL}`
           {this.renderShareButton(correct, total, state.questions)}
 
           <button onClick={() => window.location.reload()} class="play-again">Play Again!</button>
+          {this.props.install &&
+            <button onClick={this.clickInstall.bind(this)} class="install-button">Install</button>
+          }
         </div>
 
         {this.renderResponses(state.questions.questionsPlayed)}
