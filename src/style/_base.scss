@@ -9,8 +9,8 @@ body {
 }
 
 #app {
-  max-width: 800px;
-  width: 100%;
+  min-height: 700px;
+  width: 800px;
 }
 
 code {
@@ -27,5 +27,9 @@ code {
 @media (max-width: 500px) {
   body {
     padding: 0.75rem;
+  }
+
+  #app {
+    width: 100%;
   }
 }
