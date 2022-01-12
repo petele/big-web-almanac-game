@@ -1,7 +1,7 @@
 {
   "name": "big-web-almanac-game",
   "version": "0.0.1",
-  "description": "Big Web Almanac Game",
+  "description": "The Big Web Almanac Quiz",
   "private": true,
   "license": "Apache-2.0",
   "scripts": {

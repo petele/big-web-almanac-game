@@ -16,6 +16,11 @@
   cursor: pointer;
 }
 
+.about-btn img:hover,
+.about-btn img:focus {
+  transform: scale(1.1);
+}
+
 .logo {
   display: inline-block;
   max-width: 350px;
