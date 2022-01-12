@@ -37,7 +37,6 @@ class Game extends Component {
   }
 
   saveAndNextQuestion(answerUser, e) {
-    console.log(this.state.currentQuestion, answerUser)
     const currentQuestion = this.state.currentQuestion;
     const answerActual = currentQuestion.answer;
 
