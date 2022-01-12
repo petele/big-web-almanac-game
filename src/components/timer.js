@@ -22,7 +22,6 @@ const Timer = (props) => {
         setPercent(pct);
         setRemaining(remainSec);
       } else {
-        console.log('stopped');
         clearInterval(myInterval);
         document.body.style.setProperty("--timer", "0%");
         if (typeof props.onTimerExpired === 'function') {
@@ -30,10 +29,6 @@ const Timer = (props) => {
         }
       }
     }, 20);
-
-    // if (remaining === 0 && typeof props.onTimerExpired === 'function') {
-    //   props.onTimerExpired();
-    // }
 
     return () => {
       clearInterval(myInterval);
