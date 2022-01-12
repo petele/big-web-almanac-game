@@ -118,7 +118,7 @@ class Game extends Component {
     }
     return (
       <div class="container">
-        <Timer startAt={state.startAt} numSec="60" onTimerExpired={this._timerExpired.bind(this)} />
+        <Timer startAt={state.startAt} numSec="5" onTimerExpired={this._timerExpired.bind(this)} />
         {state.chapter && <h2 class="chapter-name">{getChapterName(state.chapter)} Edition</h2>}
         <Question
           q={state.currentQuestion.question}

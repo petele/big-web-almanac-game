@@ -82,6 +82,8 @@ ${APP_URL}`
           <p class="result-subhead">Nice job! In 60 seconds, you answered <span>{correct}</span> {correct == 1 ? 'question' : 'questions'} correctly out of <span>{total}</span> {total == 1 ? 'question' : 'total questions'} attempted.</p>
 
           {this.renderShareButton(correct, total, state.questions)}
+
+          <button onClick={() => window.location.reload()} class="play-again">Play Again!</button>
         </div>
 
         {this.renderResponses(state.questions.questionsPlayed)}
