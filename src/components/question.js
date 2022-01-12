@@ -3,7 +3,7 @@ import { h } from 'preact';
 const Question = (props) => {
 
   return (
-    <div class="question-block">
+    <div class="question-block" aria-live="polite">
       <fieldset class="answers">
         <h2 class="question">
           <span class="question-num">{props.num}. </span>

@@ -71,9 +71,9 @@ ${APP_URL}`
 
     return (
       <div class="container">
-        <div class="result-block">
+        <div class="result-block" aria-live="polite">
           <h1 class="result-header">{score}% correct out of <span>{total}!</span></h1>
-          <p class="result-subhead">Nice job! In 60 seconds, you answered <span>{correct}</span> questions correctly out of <span>{total}</span> total questions attempted.</p>
+          <p class="result-subhead">Nice job! In 60 seconds, you answered <span>{correct}</span> question{correct == 1 ? '' : 's'} correctly out of <span>{total}</span> {total == 1 ? 'question' : 'total questions'} attempted.</p>
 
           {this.renderShareButton(correct, total, state.questions.questionsPlayed)}
         </div>
