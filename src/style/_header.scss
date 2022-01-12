@@ -38,3 +38,9 @@
     width: 800px;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .about-btn {
+    filter: invert(1);
+  }
+}
