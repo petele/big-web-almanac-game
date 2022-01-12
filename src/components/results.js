@@ -9,14 +9,19 @@ class Results extends Component {
   }
 
   renderResponses(questions) {
+    if (!questions.length) {
+      return;
+    }
+
     return (
       <div class="responses">
+      <h2>Let's review your results:</h2>
       { questions.map((q, i) => {
         return (
           <div className={`response ${q.answerCorrect ? 'correct' : 'incorrect'}`}>
             <h3 class="result-q">{i + 1}. {q.question}</h3>
             <p class="result-a">
-              {q.answerUser}&nbsp;
+              {q.answerUser}<br>
               <span>
                 ({
                   q.answerCorrect ?
@@ -33,11 +38,20 @@ class Results extends Component {
   }
 
   renderShareButton(correct, total, questions) {
-    const shareText = `The Big Web Almanac Quiz (${correct}/${total})
+    const APP_URL = 'https://big-web-almanac-game.web.app/';
+    let shareText;
+
+    if (questions.length) {
+      shareText = `The Big Web Almanac Quiz (${correct}/${total})
 
 ${questions.map(({answerCorrect}) => answerCorrect ? '🟩' : '⬜️').join('')}
 
-https://big-web-almanac-game.web.app/`;
+${APP_URL}`;
+    } else {
+      shareText = `Test your knowledge of the state of the web with The Big Web Quiz!
+
+${APP_URL}`
+    }
 
     return (
       <a class="share-button" href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`}>
@@ -64,7 +78,6 @@ https://big-web-almanac-game.web.app/`;
           {this.renderShareButton(correct, total, state.questions.questionsPlayed)}
         </div>
 
-        <h2>Let's review your results:</h2>
         {this.renderResponses(state.questions.questionsPlayed)}
       </div>
     );
