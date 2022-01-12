@@ -13,7 +13,6 @@ class App extends Component {
 
   componentDidMount() {
     window.addEventListener('beforeinstallprompt', (e) => {
-      console.log('beforeinstall', e);
       this.setState({beforeInstallPrompt: e});
     });
   }
