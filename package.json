@@ -11,7 +11,8 @@
     "dev": "preact watch",
     "lint": "eslint src",
     "test": "jest",
-    "production": "NODE_ENV=production preact build --no-prerender"
+    "production": "NODE_ENV=production preact build --no-prerender",
+    "deploy": "firebase deploy"
   },
   "eslintConfig": {
     "plugins": [

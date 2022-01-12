@@ -19,16 +19,11 @@
 }
 
 @media (max-width: 500px) {
-  .header {
-    grid-template-columns: auto;
-    justify-content: center;
+  .logo {
+    max-width: 200px;
   }
 
   .about-btn {
-    display: none;
-  }
-
-  .timer {
-    text-align: center;
+    height: 40px;
   }
 }

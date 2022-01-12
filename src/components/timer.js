@@ -22,13 +22,13 @@ const Timer = (props) => {
         setPercent(pct);
         setRemaining(remainSec);
       } else {
+        clearInterval(myInterval);
         document.body.style.setProperty("--timer", "0%");
+        if (typeof props.onTimerExpired === 'function') {
+          props.onTimerExpired();
+        }
       }
     }, 20);
-
-    if (remaining === 0 && typeof props.onTimerExpired === 'function') {
-      props.onTimerExpired();
-    }
 
     return () => {
       clearInterval(myInterval);
