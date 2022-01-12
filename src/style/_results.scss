@@ -1,9 +1,10 @@
 .response {
     background: var(--answer-color);
-    border: 4px solid var(--answer-border);
+    border: 2px solid var(--answer-border);
     padding: 0.5rem 1rem;
     line-height: 1;
     margin-bottom: 1rem;
+    border-radius: 2rem;
 }
 
 .response a {
@@ -85,17 +86,31 @@
 }
 
 @media (max-width: 500px) {
+    .response {
+        border-width: 1px;
+    }
     .result-header {
         font-size: 2rem;
     }
 
     .result-subhead {
         font-size: 1rem;
+        margin: 2rem 0;
     }
 
     .result-block {
         padding: 1.5rem;
-        margin: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .result-q,
+    .result-a {
+        font-weight: 500;
+        font-size: 0.9rem;
+    }
+
+    .result-a {
+        margin-bottom: 0.5rem;
     }
 
     .share-button p {

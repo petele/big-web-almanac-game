@@ -13,6 +13,12 @@ body {
   width: 100%;
 }
 
+code {
+  background: var(--north-carolina-blue);
+  border: 1px solid var(--carolina-blue);
+  padding: 0.1em 0.25em;
+}
+
 ::selection {
   background: var(--star-yellow);
   color: black;
