@@ -24,6 +24,10 @@ class Game extends Component {
     this.state.currentQuestion = this.getNewQuestion();
   }
 
+  componentDidMount() {
+    document.querySelector('.question-block').focus();
+  }
+
   getNewQuestion() {
     return this.state.questions.getNewQuestion();
   }
@@ -48,6 +52,7 @@ class Game extends Component {
     const answers = document.querySelectorAll('.answer');
 
     clickedAnswer.classList.add('guessed');
+    clickedAnswer.setAttribute('aria-label', isAnswerCorrect ? 'Correct!' : 'Incorrect.');
 
     [...answers].forEach((elem) => {
       elem.setAttribute('disabled', true);
@@ -62,6 +67,7 @@ class Game extends Component {
 
       setTimeout(() => {
         elem.removeAttribute('disabled');
+        elem.removeAttribute('aria-label');
         elem.classList.remove('guessed');
       }, 1000);
     });
@@ -85,7 +91,7 @@ class Game extends Component {
         this.setState({ currentQuestion: nextQuestion });
         requestAnimationFrame(() => {
           // Move focus to the next question.
-          document.querySelector('.question').focus();
+          document.querySelector('.question-block').focus();
         });
         return;
       }
