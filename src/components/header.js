@@ -8,7 +8,7 @@ const Header = () => {
       <Link href="/" label="Home" aria-label="Home">
         <picture class="logo">
           <source srcset="/img/logo.avif" type="image/avif" />
-          <img src="/img/logo.png" />
+          <img src="/img/logo.png" height="137" width="350" />
         </picture>
       </Link>
       <Link href="/about" class='about-btn'>
