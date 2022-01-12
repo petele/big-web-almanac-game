@@ -53,3 +53,17 @@
 .category img {
     height: 4rem;
 }
+
+@media (prefers-color-scheme: dark) {
+    .start {
+      background-color: var(--french-blue);
+    }
+
+    .categories {
+        background: var(--indigo-dye);
+    }
+
+    .category {
+        background-color: var(--burlywood);
+    }
+  }

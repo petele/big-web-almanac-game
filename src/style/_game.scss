@@ -142,3 +142,29 @@ fieldset {
     margin: -0.5rem auto 0.5rem;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .answer {
+    color: white;
+    --answer-color: #084f81;
+    --answer-border: var(--oxford-blue);
+  }
+
+  .answer:disabled {
+    color: var(--light-gray);
+  }
+
+  .timer span {
+    color: var(--carolina-blue);
+  }
+
+  fieldset {
+    background-color: var(--indigo-dye);
+    border-color: var(--oxford-blue);
+  }
+
+  .question-block {
+    --sand: #084f81;
+    --star-yellow: var(--french-blue);
+  }
+}

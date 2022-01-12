@@ -23,3 +23,18 @@ p {
 a {
   color: var(--french-blue);
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--oxford-blue);
+    color: var(--ghost-white);
+  }
+
+  a {
+    color: var(--north-carolina-blue)
+  }
+
+  code {
+    color: var(--oxford-blue);
+  }
+}
