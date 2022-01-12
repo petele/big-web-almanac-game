@@ -22,16 +22,16 @@ const Landing = () => {
       <ul class="categories">
         <li><Link class="category" href="/play?chapter=css">
           <picture>
-            <source srcset="../static/img/character-painter.avif" type="image/avif" />
-            <img src="../static/img/character-painter.png" />
+            <source srcset="/img/character-painter.avif" type="image/avif" />
+            <img src="/img/character-painter.png" />
           </picture>
           <h3>CSS</h3>
         </Link>
         </li>
         <li><Link class="category" href="/play?chapter=javascript">
           <picture>
-            <source srcset="../static/img/character-hat.avif" type="image/avif" />
-            <img src="../static/img/character-hat.png" />
+            <source srcset="/img/character-hat.avif" type="image/avif" />
+            <img src="/img/character-hat.png" />
           </picture>
           <h3>JavaScript</h3>
         </Link>
