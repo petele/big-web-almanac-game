@@ -3,6 +3,8 @@ import Question from '../../components/question.js';
 import Timer from '../../components/timer.js';
 import Questions from '../../components/questions';
 import Results from '../../components/results';
+import { getChapter } from '../../components/questions';
+import { getChapterName } from '../../util/almanac.js';
 
 // Game state and timer
 
@@ -10,6 +12,7 @@ class Game extends Component {
   state = {
     isPlaying: true,
     startAt: Date.now(),
+    chapter: getChapter()
   };
 
   _butNextQuestion = null;
@@ -116,6 +119,7 @@ class Game extends Component {
     return (
       <div class="container">
         <Timer startAt={state.startAt} numSec="60" onTimerExpired={this._timerExpired.bind(this)} />
+        {state.chapter && <h2 class="chapter-name">{getChapterName(state.chapter)} Edition</h2>}
         <Question
           q={state.currentQuestion.question}
           num={state.questions.questionsPlayed.length + 1}
