@@ -67,7 +67,7 @@ function initQuestion(question) {
   let answer = question['Answer'];
   const shouldFormatAnswer = question['Alternate 1'] == '';
   if (shouldFormatAnswer) {
-    answer = formatValue(answer, precision, suffix)
+    answer = formatValue(answer, precision, suffix);
   }
 
   return {
@@ -95,7 +95,7 @@ function generateCandidateAnswers(question) {
   }
 
   // Randomly generate candidates.
-  let value = parseInt(question['Answer'], 10);
+  let value = parseFloat(question['Answer'], 10);
   const candidateAnswers = [value];
   const min = question['Min'];
   const max = question['Max'];
@@ -116,12 +116,13 @@ function generateCandidateAnswers(question) {
   return candidateAnswers.map(value => formatValue(value, precision, suffix));
 }
 
+// Avoid giving two almost-identical options, like 33% and 34%.
 function isTooClose(min, max, value, answers) {
   // No two values should be within 10% of the candidate range.
   const tooClose = 0.1;
   const valueBuffer = tooClose * (max - min)
   return answers.some(answer => {
-    return Math.abs(parseInt(value, 10) - parseInt(answer, 10)) <= valueBuffer;
+    return Math.abs(parseFloat(value, 10) - parseFloat(answer, 10)) <= valueBuffer;
   });
 }
 
