@@ -5,7 +5,7 @@ const Question = (props) => {
   return (
     <div class="question-block" aria-live="polite">
       <fieldset class="answers">
-        <h2 class="question">
+        <h2 class="question" tabindex="0">
           <span class="question-num">{props.num}. </span>
           {props.q}
         </h2>

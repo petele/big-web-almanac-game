@@ -83,6 +83,10 @@ class Game extends Component {
       const nextQuestion = this.getNewQuestion();
       if (nextQuestion) {
         this.setState({ currentQuestion: nextQuestion });
+        requestAnimationFrame(() => {
+          // Move focus to the next question.
+          document.querySelector('.question').focus();
+        });
         return;
       }
       this.setState({isPlaying: false});
