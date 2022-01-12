@@ -103,6 +103,16 @@
     margin: 2rem;
 }
 
+.next-step-buttons {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+}
+
+.next-step-buttons button + button {
+    margin-left: 1rem;
+}
+
 @media (max-width: 500px) {
     .response {
         border-width: 1px;

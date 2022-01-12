@@ -91,10 +91,12 @@ ${APP_URL}`
 
           {this.renderShareButton(correct, total, state.questions)}
 
-          <button onClick={() => window.location.reload()} class="play-again">Play Again!</button>
-          {this.props.install &&
-            <button onClick={this.clickInstall.bind(this)} class="install-button">Install</button>
-          }
+          <div class="next-step-buttons">
+            {this.props.install &&
+              <button onClick={this.clickInstall.bind(this)} class="install-button">Install</button>
+            }
+            <button onClick={() => window.location.reload()} class="play-again">Play Again</button>
+          </div>
         </div>
 
         {this.renderResponses(state.questions.questionsPlayed)}
