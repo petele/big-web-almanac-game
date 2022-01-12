@@ -55,7 +55,7 @@ ${APP_URL}`
 
     return (
       <a class="share-button" href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`}>
-        <img src="../static/img/twitter-logo-blue.svg" />
+        <img src="/img/twitter-logo-blue.svg" />
         <p>Share your results</p>
       </a>
     );
