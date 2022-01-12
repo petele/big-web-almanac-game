@@ -83,3 +83,22 @@
     display: grid;
     margin: 2rem;
 }
+
+@media (max-width: 500px) {
+    .result-header {
+        font-size: 2rem;
+    }
+
+    .result-subhead {
+        font-size: 1rem;
+    }
+
+    .result-block {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .share-button p {
+        font-size: 1rem;
+    }
+}

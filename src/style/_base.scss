@@ -17,3 +17,9 @@ body {
   background: var(--star-yellow);
   color: black;
 }
+
+@media (max-width: 500px) {
+  body {
+    padding: 0.5rem;
+  }
+}
