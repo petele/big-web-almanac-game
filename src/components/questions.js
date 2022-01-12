@@ -10,6 +10,7 @@ export default class Questions {
     this.questionsPlayed = [];
     // The quiz defaults to all chapters.
     this.chapter = null;
+    this.chapterName = null;
 
     this.initQuestions();
   }
@@ -17,7 +18,6 @@ export default class Questions {
   initQuestions() {
     const optChapter = getChapter();
     if (optChapter) {
-      this.chapter = optChapter;
       // Filter questions for only the requested chapter.
       const filteredQuestions = this.questionBank.filter(question => {
         return question['Chapter'] == optChapter;
@@ -25,6 +25,8 @@ export default class Questions {
       // Ensure we're not filtering by a bogus chapter.
       if (filteredQuestions.length) {
         this.questionBank = filteredQuestions;
+        this.chapter = optChapter;
+        this.chapterName = getChapterName(optChapter);
       }
     }
   }

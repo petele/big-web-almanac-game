@@ -38,13 +38,19 @@ class Results extends Component {
   }
 
   renderShareButton(correct, total, questions) {
-    const APP_URL = 'https://big-web-almanac-game.web.app/';
+    let edition = '';
+    const APP_URL = new URL('https://big-web-almanac-game.web.app/');
+    if (questions.chapter) {
+      APP_URL.searchParams.append('chapter', questions.chapter);
+      edition = `: ${questions.chapterName} edition`;
+    }
+
     let shareText;
 
-    if (questions.length) {
-      shareText = `The Big Web Almanac Quiz (${correct}/${total})
+    if (questions.questionsPlayed.length) {
+      shareText = `The Big Web Almanac Quiz${edition} (${correct}/${total})
 
-${questions.map(({answerCorrect}) => answerCorrect ? '🟩' : '⬜️').join('')}
+${questions.questionsPlayed.map(({answerCorrect}) => answerCorrect ? '🟩' : '⬜️').join('')}
 
 ${APP_URL}`;
     } else {
@@ -75,7 +81,7 @@ ${APP_URL}`
           <h1 class="result-header">{score}% correct out of <span>{total}!</span></h1>
           <p class="result-subhead">Nice job! In 60 seconds, you answered <span>{correct}</span> {correct == 1 ? 'question' : 'questions'} correctly out of <span>{total}</span> {total == 1 ? 'question' : 'total questions'} attempted.</p>
 
-          {this.renderShareButton(correct, total, state.questions.questionsPlayed)}
+          {this.renderShareButton(correct, total, state.questions)}
         </div>
 
         {this.renderResponses(state.questions.questionsPlayed)}

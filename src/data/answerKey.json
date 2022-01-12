@@ -133,13 +133,13 @@
     "Chapter Number": 16,
     "Chapter": "cms",
     "Clue": "What is the median number of bytes loaded by a website built with a CMS?",
-    "Answer": "2",
+    "Answer": "2.3",
     "Alternate 1": "",
     "Alternate 2": "",
     "Alternate 3": "",
-    "Min": 1,
-    "Max": 50,
-    "Digits of Precision": 0,
+    "Min": 0,
+    "Max": 12,
+    "Digits of Precision": 1,
     "Suffix": " MB"
   },
   {
