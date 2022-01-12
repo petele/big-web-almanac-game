@@ -1,16 +1,25 @@
 import { h } from 'preact';
 import { Link } from 'preact-router/match';
+import { getChapter } from '../../components/questions';
+import { getChapterName } from '../../util/almanac.js';
 
 const Landing = () => {
 
   document.title = 'Big Web Almanac Quiz';
+  const chapter = getChapter();
+  const chapterName = getChapterName(chapter);
+  let playURL = '/play';
+
+  if (chapterName) {
+    playURL += '?chapter=' + chapter;
+  }
 
   return (
     <div class="container">
       <h1>Welcome to the Big Web Almanac Quiz!</h1>
       <p>In this game, you'll have <strong>60 seconds</strong> to answer as many questions as you can about the web today. All questions in this game are statistics pulled from the 2021 <a href="https://almanac.httparchive.org/en/2021/">Web Almanac</a>, and are based on real data from millions of live websites.</p>
       <p>So, are you ready?</p>
-      <Link class="start" href="/play">
+      <Link class="start" href={playURL}>
         Start Quiz
       </Link>
 

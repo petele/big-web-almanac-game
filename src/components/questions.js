@@ -58,7 +58,7 @@ export default class Questions {
 
 }
 
-function getChapter() {
+export function getChapter() {
   const url = new URL(location.href);
   return url.searchParams.get('chapter');
 }
