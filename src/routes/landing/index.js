@@ -7,7 +7,7 @@ const Landing = () => {
 
   return (
     <div class="container">
-      <h1>Welcome to the Big Web Almanac Quiz</h1>
+      <h1>Welcome to the Big Web Almanac Quiz!</h1>
       <p>In this game, you'll have <strong>60 seconds</strong> to answer as many questions as you can about the web today. All questions in this game are statistics pulled from the 2021 <a href="https://almanac.httparchive.org/en/2021/">Web Almanac</a>, and are based on real data from millions of live websites.</p>
       <p>So, are you ready?</p>
       <Link class="start" href="/play">
@@ -17,7 +17,7 @@ const Landing = () => {
       <hr></hr>
 
       <h2>Categories</h2>
-      <p>Customize your game!</p>
+      <p>You can select from the following categories for a more customized game:</p>
 
       <ul class="categories">
         <li><Link class="category" href="/play?chapter=css">
