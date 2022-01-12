@@ -11,6 +11,13 @@ import Header from '../components/header.js';
 
 class App extends Component {
 
+  componentDidMount() {
+    window.addEventListener('beforeinstallprompt', (e) => {
+      console.log('beforeinstall', e);
+      this.setState({beforeInstallPrompt: e});
+    });
+  }
+
   handleRoute = (e) => {
     this.setState({
       currentURL: e.url,
@@ -18,14 +25,14 @@ class App extends Component {
     });
   }
 
-  render() {
+  render(props, state) {
     return (
       <div id="app">
         <Header />
         <main>
           <Router onChange={this.handleRoute}>
             <Landing path="/" />
-            <Game path="/play" />
+            <Game path="/play" install={state.beforeInstallPrompt} />
             <About path="/about" />
             <NotFound default />
           </Router>
