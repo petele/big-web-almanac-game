@@ -42,7 +42,8 @@
     },
     "globals": {
       "__BUILD_DATE__": false,
-      "__BUILD_TYPE__": false
+      "__BUILD_TYPE__": false,
+      "gtag": false
     }
   },
   "devDependencies": {
