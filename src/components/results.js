@@ -10,9 +10,13 @@ class Results extends Component {
     this.props.install.prompt();
   }
 
-  logScore(score) {
+  logScore(correct, total, score, questions) {
     gtag('event', 'score', {
-      value: score
+      value: score,
+      correct,
+      total,
+      score: `${score}%`,
+      chapter: questions.chapter ? questions.chapterName : undefined
     });
   }
 
@@ -81,7 +85,7 @@ ${APP_URL}`
       return question.answerCorrect;
     }).length;
     const score = total == 0 ? 0 : Math.floor(correct / total * 100);
-    this.logScore(score);
+    this.logScore(correct, total, score, state.questions);
 
     return (
       <div class="container">
