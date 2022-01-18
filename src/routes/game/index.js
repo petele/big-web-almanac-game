@@ -80,7 +80,8 @@ class Game extends Component {
 
   logAnswer(question) {
     gtag('event', 'answer', {
-      value: question.answerCorrect ? 1 : 0,
+      value: question.answerUser,
+      correct: question.answerCorrect ? 1 : 0,
       question: question.question,
       chapter: question.chapterName
     });
