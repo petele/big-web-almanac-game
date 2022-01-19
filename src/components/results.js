@@ -12,7 +12,7 @@ class Results extends Component {
 
   logScore(correct, total, score, questions) {
     gtag('event', 'score', {
-      value: score,
+      value: total == 0 ? 0 : correct / total,
       correct,
       total,
       score: `${score}%`,
